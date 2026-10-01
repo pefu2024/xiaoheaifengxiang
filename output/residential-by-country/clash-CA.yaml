@@ -6,28 +6,45 @@ log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01 (家宽) - xiaohe
   type: vless
-  server: 188.114.97.6
-  port: 8080
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  server: 104.21.88.201
+  port: 443
+  uuid: 07f9bc85-613f-4a33-8da1-191973c43c0a
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: app-q0zc4t.user-4gfyh5.workers.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: app-q0zc4t.user-4gfyh5.workers.dev
+- name: 🇨🇦 加拿大 (Canada) 02 (家宽) - xiaohe
+  type: vless
+  server: 172.64.147.104
+  port: 2096
+  uuid: 86c50e3a-5b87-40dd-bd20-03c7f2735e40
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ygwp.sbbz.tech
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+      Host: ygwp.sbbz.tech
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 (家宽) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 02 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 (家宽) - xiaohe
+  - 🇨🇦 加拿大 (Canada) 02 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
