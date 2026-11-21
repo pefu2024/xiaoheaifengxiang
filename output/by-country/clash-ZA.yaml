@@ -6,27 +6,18 @@ log-level: info
 proxies:
 - name: 🇿🇦 ZA 01 - xiaohe
   type: ss
-  server: 102.37.156.224
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
-  udp: true
-- name: 🇿🇦 ZA 02 - xiaohe
-  type: ss
   server: 102.133.165.160
   port: 16233
   cipher: chacha20-ietf-poly1305
   password: Xsy8Ox4yOV3xLlpxtjzs3X
   udp: true
-- name: 🇿🇦 ZA 03 - xiaohe
-  type: vless
-  server: 160.123.255.172
+- name: 🇿🇦 ZA 02 - xiaohe
+  type: ss
+  server: 102.37.156.224
   port: 443
-  uuid: cc99c57d-6c93-4031-9153-73f510636533
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: mama147.baklajann.ru
 proxy-groups:
 - name: PROXIES
   type: select
@@ -34,7 +25,6 @@ proxy-groups:
   - AUTO
   - 🇿🇦 ZA 01 - xiaohe
   - 🇿🇦 ZA 02 - xiaohe
-  - 🇿🇦 ZA 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -42,6 +32,5 @@ proxy-groups:
   proxies:
   - 🇿🇦 ZA 01 - xiaohe
   - 🇿🇦 ZA 02 - xiaohe
-  - 🇿🇦 ZA 03 - xiaohe
 rules:
 - MATCH,PROXIES
