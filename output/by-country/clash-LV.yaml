@@ -6,18 +6,18 @@ log-level: info
 proxies:
 - name: 🇱🇻 LV 01 - xiaohe
   type: vless
-  server: 172.66.47.56
+  server: 31.57.28.169
   port: 443
-  uuid: 3dc83518-4002-485e-a066-d3bbcaaa2b2e
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: k9-85j.pages.dev
+  servername: inlay.merlano.monster
   network: ws
   ws-opts:
-    path: /
+    path: /api/de3/stream
     headers:
-      Host: k9-85j.pages.dev
+      Host: inlay.merlano.monster
 proxy-groups:
 - name: PROXIES
   type: select
