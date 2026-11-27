@@ -5,38 +5,75 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇷 BR 01 - xiaohe
-  type: vmess
-  server: 103.14.27.207
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ''
+  servername: freeceshi6.frii.site
+  network: ws
+  ws-opts:
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    headers:
+      Host: freeceshi6.frii.site
 - name: 🇧🇷 BR 02 - xiaohe
-  type: vmess
-  server: 103.88.232.55
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: leviko-us4350.shopingggg.ir
+  port: 443
+  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ''
+  servername: freeceshi6.frii.site
+  network: ws
+  ws-opts:
+    path: /proxyip
+    headers:
+      Host: freeceshi6.frii.site
 - name: 🇧🇷 BR 03 - xiaohe
-  type: vmess
-  server: 103.88.232.55
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: leviko-us4350.shopingggg.ir
+  port: 443
+  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: None
+  servername: freeceshi6.frii.site
+  network: ws
+  ws-opts:
+    path: /proxyip
+    headers:
+      Host: freeceshi6.frii.site
+- name: 🇧🇷 BR 04 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: freeceshi6.frii.site
+  network: ws
+  ws-opts:
+    path: /proxyip
+    headers:
+      Host: freeceshi6.frii.site
+- name: 🇧🇷 BR 05 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: freeceshi6.frii.site
+  network: ws
+  ws-opts:
+    path: /proxyip
+    headers:
+      Host: freeceshi6.frii.site
 proxy-groups:
 - name: PROXIES
   type: select
@@ -45,6 +82,8 @@ proxy-groups:
   - 🇧🇷 BR 01 - xiaohe
   - 🇧🇷 BR 02 - xiaohe
   - 🇧🇷 BR 03 - xiaohe
+  - 🇧🇷 BR 04 - xiaohe
+  - 🇧🇷 BR 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -53,5 +92,7 @@ proxy-groups:
   - 🇧🇷 BR 01 - xiaohe
   - 🇧🇷 BR 02 - xiaohe
   - 🇧🇷 BR 03 - xiaohe
+  - 🇧🇷 BR 04 - xiaohe
+  - 🇧🇷 BR 05 - xiaohe
 rules:
 - MATCH,PROXIES
